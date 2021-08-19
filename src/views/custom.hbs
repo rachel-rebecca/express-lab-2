@@ -1,0 +1,26 @@
+<h1>Build Your Own Pizza</h1>
+
+<form action="/confirmation" method="POST">
+Size: <select name="size">
+    <option name="size" value="Small">Small</option>
+    <option name="size" value="Medium">Medium</option>
+    <option name="size" value="Large">Large</option>
+</select>
+<br>
+How many toppings? <input type="number" name="toppingCount"/>
+<br>
+<ul>
+    {{#each toppings}}
+    <li>{{this}}</li>
+    {{/each}}
+</ul>
+<input type="checkbox" name="glutenFreeCrust"/> Gluten-Free Crust? ($2.00 extra)
+<br>
+Special Instructions (Optional)
+<input type="text" name="specialInstructions"/>
+<br>
+<input type="submit"/>
+</form>
+
+<a href="/">Never Mind</a>
+

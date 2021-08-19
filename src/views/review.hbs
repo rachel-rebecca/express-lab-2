@@ -1,0 +1,20 @@
+<h1>Leave a Review</h1>
+
+<form action="/thanks" method="POST">
+    Your Name<input name="name" type="text"/> 
+    <br>
+    Comment 
+    <br>
+    <input type="text" name="comment"/>
+    <br>
+    Rating 
+    <br>
+        <input type="radio" name="rating" value="5"/>5(best) -
+        <input type="radio" name="rating" value="4"/>4 -
+        <input type="radio" name="rating" value="3"/>3 -
+        <input type="radio" name="rating" value="2"/>2 -
+        <input type="radio" name="rating" value="1"/>1(worst)     
+    <br>
+    {{!-- <input type="checkbox" name="hungry"> --}}
+    <input type="submit"> <a href="/">Never Mind</a>
+</form>

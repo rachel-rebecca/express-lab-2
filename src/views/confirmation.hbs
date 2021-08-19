@@ -1,0 +1,14 @@
+<h1>Your Pizza</h1>
+
+<p><b>Size:</b> {{size}}</p>
+<p><b>Toppings:</b> {{toppingCount}}</p>
+<p><b>Gluten-Free Crust:</b> {{glutenFreeCrust}}</p>
+<p><b>Special Instructions:</b> {{specialInstructions}}</p>
+<p><b>Price:</b> ${{price}}</p>
+
+{{#if freeDelivery}}
+<p>Because your order meets the $15.00 minimum, you get FREE DELIVERY!</p>
+{{/if}}
+
+
+<a href="/custom">Build another pizza</a> | <a href="/">Back to Homepage</a>

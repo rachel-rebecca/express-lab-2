@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<h1>Welcome to Express Pizza</h1>
+
+<h2>Speciality Pizzas</h2>
+<ul>
+    {{#each specialPizzas}}
+    <li><a href="/pizza/{{this.id}}">{{this.name}}</a></li>
+    {{/each}}
+</ul>
+
+
+<h2>Custom Pizza</h2>
+
+<a href="/custom">Build your own! </a>
+
+<h2>Leave a Review</h2>
+
+<a href="/review">Click here to leave a review.</a>
+
+<img src="pizza.png" alt="pizza drawing with word yum"/>
+
+
+
+
+</body>
+</html>
+
+
+
