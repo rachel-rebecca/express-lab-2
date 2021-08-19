@@ -16,6 +16,10 @@ ul {
     margin: 0px;
 }
 
+li {
+    margin: 2px;
+}
+
 a {
     text-decoration: none;
     color:rgb(117, 83, 150);
@@ -41,6 +45,18 @@ h2 {
 
 p{
     color:rgb(152, 140, 196);
+}
+
+form{
+    color:rgb(152, 140, 196);
+}
+
+input{
+    margin: 5px;
+}
+
+.bgInput {
+    padding: 20%;
 }
 
 @media only screen and (min-width:600px){
