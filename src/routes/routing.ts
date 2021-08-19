@@ -5,9 +5,9 @@ import express from "express";
 const routes = express.Router()
 
 const specialPizzas = [
-    {name:"Pepper & pepperoni",id: 1, price:15.00}, 
-    {name:"Jalapeno Pineapple", id: 2, price:12.00}, 
-    {name:"Greek Pizza", id: 3, price:13.00}
+    {name:"Pepper Pepperoni",id: 1, price:15}, 
+    {name:"Jalapeno Pineapple", id: 2, price:12}, 
+    {name:"Greek Pizza", id: 3, price:13}
 ]
 
 const toppings = ["Pepperoni", "Sausage", "Chicken", "Mushroom", "Olive", "Green Pepper", "Onion", "Jalapeno", "Feta", "Pineapple"];
@@ -19,11 +19,20 @@ routes.get('/', (req, res) =>{
 })
 
 
-routes.get("/pizza/:id", (req, res) => {
-    const id: number = Number(req.params.id);
-    let pizza = specialPizzas.find(pizza => pizza.id === id);
-    let page = "pizza" + req.params.id;
-    res.render(page, pizza);
+routes.get("/pizza", (req, res) => {
+    let name: string = req.query.name as string;
+    let price: number = parseInt(req.query.price as string);
+    let imgSrc;
+
+    if (name == "Pepper Pepperoni") {
+        imgSrc = "pepper.png";
+    } else if (name == "Jalapeno Pineapple") {
+        imgSrc = "pineapple.png";
+    } else if (name == "Greek Pizza") {
+        imgSrc = "greek.png";
+    }
+
+    res.render("pizza", {name, price, imgSrc});
 })
 
 routes.get("/custom", (req, res) => {
