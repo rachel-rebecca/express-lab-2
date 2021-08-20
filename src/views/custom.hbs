@@ -24,7 +24,7 @@ Size: <select name="size">
 <br>
 How many toppings? <input type="number" name="toppingCount"/>
 <br>
-<ul>
+<ul id="listToppings">
     {{#each toppings}}
     <li>{{this}}</li>
     {{/each}}
@@ -34,8 +34,11 @@ How many toppings? <input type="number" name="toppingCount"/>
 Special Instructions (Optional)
 <input type="text" name="specialInstructions" class="bgInput"/>
 <br>
-<button type="submit">Calculate Price</button>
-<a href="/">Never Mind</a>
+<div class="buttonDiv">
+    <button type="submit">Calculate Price</button>
+    <a href="/">Never Mind</a>
+</div>
+
 </form>
 
 

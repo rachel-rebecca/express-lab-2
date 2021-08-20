@@ -23,7 +23,8 @@ li {
 a {
     text-decoration: none;
     color:rgb(87, 58, 117);
-    margin: 0px;
+    margin: auto;
+    
 }
 
 a:hover {
@@ -71,6 +72,31 @@ input{
 
 #linkThanks {
     font-size: 1.25em;
+}
+
+#listToppings {
+    list-style:disc;
+}
+
+button {
+    background:rgb(240, 180, 102);
+    color:rgb(87, 58, 117);
+    border: none;
+    border-radius: 2px;
+    height: 30px;
+    width: 150px;
+    font-family: 'Montserrat', sans-serif;
+    margin: auto;
+}
+
+button:hover {
+    background:bisque;
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 @media only screen and (min-width:600px){

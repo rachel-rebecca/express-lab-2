@@ -56,6 +56,8 @@ routes.post("/confirmation", (req, res) => {
     }
 
     let freeDelivery = price >= 15;
+
+    price = price.toFixed(2);
     
     res.render("confirmation", {size, toppingCount, glutenFreeCrust, specialInstructions, price, freeDelivery})
 })
