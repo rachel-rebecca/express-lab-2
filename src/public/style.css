@@ -60,6 +60,11 @@ input{
     padding-right: 40%;
 }
 
+#linksConfirmation {
+    display: flex;
+    font-size: 1.25em;
+}
+
 @media only screen and (min-width:600px){
     h1{
         font-size: 3em;
