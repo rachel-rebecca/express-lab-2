@@ -1,20 +1,12 @@
 import express from "express";
 
-
-
 const routes = express.Router()
-
-const specialPizzas = [
-    {name:"Pepper Pepperoni",id: 1, price:15}, 
-    {name:"Jalapeno Pineapple", id: 2, price:12}, 
-    {name:"Greek Pizza", id: 3, price:13}
-]
 
 const toppings = ["Pepperoni", "Sausage", "Chicken", "Mushroom", "Olive", "Green Pepper", "Onion", "Jalapeno", "Feta", "Pineapple"];
 
 routes.get('/', (req, res) =>{ 
     
-    res.render("home", {specialPizzas})
+    res.render("home")
  
 })
 
@@ -74,8 +66,8 @@ routes.get("/review", (req, res) => {
 
 routes.post("/thanks", (req, res) => {
     console.log(req.body)
-    let name = req.body.name;
-    let comment = req.body.comment;
+    let name: string = req.body.name;
+    let comment: string = req.body.comment;
     let rating = req.body.rating;
     res.render("thanks", {name, comment, rating});
 })

@@ -22,7 +22,7 @@ li {
 
 a {
     text-decoration: none;
-    color:rgb(117, 83, 150);
+    color:rgb(87, 58, 117);
     margin: 0px;
 }
 
@@ -52,11 +52,12 @@ form{
 }
 
 input{
-    margin: 5px;
+    margin: 10px;
 }
 
 .bgInput {
-    padding: 20%;
+    padding-bottom: 40%;
+    padding-right: 40%;
 }
 
 @media only screen and (min-width:600px){
