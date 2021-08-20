@@ -75,7 +75,11 @@ routes.post("/thanks", (req, res) => {
 })
 
 routes.get("/public", (req, res) => {
-    res.render("public")
+    res.render("public");
+})
+
+routes.get("/bootstrap", (req, res) => {
+    res.render("bootstrap");
 })
 
 export default routes;
